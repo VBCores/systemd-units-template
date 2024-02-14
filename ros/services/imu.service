@@ -1,0 +1,14 @@
+[Install]
+RequiredBy = ros.target
+[Service]
+ExecStart = /opt/voltbro/ros/scripts/imu.sh
+Restart = on-failure
+RestartSec = 5
+StartLimitBurst = 3
+StartLimitInterval = 50
+TimeoutSec = 20
+Type = simple
+[Unit]
+Description = Bosch IMU driver
+PathExists = /dev/ttyUSB0
+

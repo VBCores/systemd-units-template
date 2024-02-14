@@ -1,0 +1,3 @@
+{
+  manifestService(obj):: std.manifestIni({ sections: obj }),
+}

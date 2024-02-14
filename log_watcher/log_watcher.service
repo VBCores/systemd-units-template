@@ -1,0 +1,14 @@
+[Unit]
+Description=ROS log rotation
+Wants=log_watcher.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /opt/voltbro/log_watcher/log_watcher.py
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONPATH=/opt/ros/noetic/lib/python3/dist-packages:/opt/voltbro
+Restart=no
+User=root
+
+[Install]
+WantedBy=multi-user.target

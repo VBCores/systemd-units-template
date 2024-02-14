@@ -1,0 +1,14 @@
+{
+  service_defaults: {
+    Type: 'simple',
+    TimeoutSec: 20,
+    Restart: 'on-failure',
+    RestartSec: 5,
+    StartLimitInterval: 50,
+    StartLimitBurst: 3,
+  },
+  install_reqs: {
+    RequiredBy: 'ros.target',
+  },
+  exec_script(script):: '/opt/voltbro/ros/scripts/' + script,
+}

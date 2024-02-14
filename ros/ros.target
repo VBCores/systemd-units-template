@@ -1,0 +1,6 @@
+[Unit]
+Description=ROS target
+Requires=imu.service
+
+[Install]
+WantedBy=multi-user.target

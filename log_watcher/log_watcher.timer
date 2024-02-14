@@ -1,0 +1,11 @@
+[Unit]
+Description=Schedules log_watcher for ROS
+Requires=log_watcher.service
+
+[Timer]
+Unit=log_watcher.service
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
