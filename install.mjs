@@ -1,6 +1,6 @@
 #!/usr/bin/env zx
 
-await $`./render_templates.sh`;
+await $`./render_templates.mjs`;
 
 let unit_dir = '/etc/systemd/system';
 
