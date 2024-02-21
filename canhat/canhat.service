@@ -11,8 +11,7 @@ RemainAfterExit=yes
 Environment=PYTHONUNBUFFERED=1
 Environment=PYTHONPATH=/opt/voltbro
 TimeoutSec=20
-Restart=on-failure
-RestartSec=10
+
 StartLimitInterval=50
 StartLimitBurst=3
 
